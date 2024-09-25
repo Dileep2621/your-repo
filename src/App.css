@@ -1,0 +1,249 @@
+.searchBar {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.select-box {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0 6px;
+}
+
+.select-box select {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 24px;
+  padding: 0 6px;
+  width: 100%;
+}
+
+.searchBar .input-box {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0 6px;
+}
+
+.searchBar .input-box .btn-search {
+  font-size: 12px;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 2px;
+  height: 24px;
+  width: 75px;
+  cursor: pointer;
+}
+
+.searchBar .input-box input[type="text"] {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 24px;
+  padding: 0 6px;
+  width: 100%;
+}
+
+.searchBar .input-box .btn-search:hover,
+.searchBar .input-box .btn-search:focus,
+.searchBar .input-box .btn-search:active,
+.searchBar .input-box .btn-search:focus-within,
+.searchBar .input-box .btn-search:active:focus,
+.searchBar .input-box .btn-search:focus-visible {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.tableData table {
+  width: 100%;
+  padding: 20px;
+  border-spacing: 0cap;
+}
+
+.tableData table th {
+  font-weight: 700;
+}
+
+.tableData table th,
+.tableData table td {
+  text-align: left;
+  border: 1px solid rgb(222, 226, 230);
+  padding: 8px;
+}
+
+.td-data {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.td-data .flag-img {
+  width: 25px;
+  height: 25px;
+}
+
+.xs-hidden {
+  display: none;
+}
+
+.paginationData {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* pagination button and page no design */
+button {
+  font-size: 1rem;
+  padding: 3px 13px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray !important;
+  color: #fff;
+  border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3)) important;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: gray !important;
+  color: #fff !important;
+  /* Keep the disabled background color */
+  cursor: not-allowed;
+}
+
+button.prevNext {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+button.prevNext:hover,
+button.prevNext:focus,
+button.prevNext:active,
+button.prevNext:focus-within {
+  background: #fff;
+  color: #000;
+}
+
+.pageButton {
+  background-color: transparent !important;
+  border: none;
+}
+
+
+.text-center {
+  text-align: center !important;
+}
+
+.disabled {
+  pointer-events: none;
+  /* Prevents clicking */
+  opacity: 0.5;
+  /* Visually disabled */
+  cursor: not-allowed;
+}
+
+.limitChangers {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.limitChangers input {
+  width: 50px;
+  height: 24px;
+  padding: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+/* circle spinner */
+.spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.3rem solid #000;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spinner-border 1.5s linear infinite;
+}
+
+@keyframes spinner-border {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+  .searchBar {
+    display: flex;
+  }
+
+  .searchBar .input-box {
+    width: 241px;
+  }
+
+  .select-box {
+    width: 241px;
+  }
+
+  .sm-show {
+    display: inline;
+  }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+  .searchBar {
+    display: flex;
+  }
+
+  .searchBar .input-box {
+    width: 241px;
+  }
+
+  .select-box {
+    width: 241px;
+  }
+
+  .sm-show {
+    display: inline;
+  }
+}
