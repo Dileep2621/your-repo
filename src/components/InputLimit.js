@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setItemsPerPage } from "../slice/paginationSlice";
 
@@ -17,6 +17,10 @@ const InputLimit = () => {
       setLimitError(false);
     }
   };
+
+  useEffect(() => {
+    setLimitError(false);
+  }, [itemsPerPage]);
   return (
     <div className="limitChangers">
       <input

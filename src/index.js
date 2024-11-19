@@ -9,11 +9,11 @@ import { store } from "./utils/store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<>Loading...</>}>
-      <Provider store={store}>
+    <Provider store={store}>
+      <Suspense fallback={<div>Loading Home...</div>}>
         <App />
-      </Provider>
-    </Suspense>
+      </Suspense>
+    </Provider>
   </React.StrictMode>
 );
 reportWebVitals();
